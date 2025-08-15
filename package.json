@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon --exec ts-node src/server.ts",
+    "start": "tsc -b && node dist/server.js",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
@@ -11,5 +13,10 @@
   "description": "",
   "dependencies": {
     "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2"
   }
 }
